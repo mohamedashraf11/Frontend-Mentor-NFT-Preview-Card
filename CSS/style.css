@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* COLORS */
+    --main-bg : hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+}
+
+main {
+    min-height: 100vh;
+    padding: 1rem;
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 370px;
+    min-height: 200px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    color: var(--white);
+}
+
+.card .nft-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    max-height: 303px;
+    cursor: pointer;
+}
+
+.card .nft-img > img{
+    max-width: 100%;
+}
+
+.card .nft-img:hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0.5);
+}
+
+.card .nft-img:hover::after {
+    content: url("../Images/icon-view.svg");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+
+.card .info {
+    margin-top: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+a:hover {
+    color: var(--cyan);
+}
+
+.info > h1{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.info > p {
+    color: var(--soft-blue);
+    font-weight: 100;
+    margin: 15px 0;
+}
+
+.ETH {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ETH .etherium > span {
+    color: var(--cyan);
+}
+
+.ETH .time-left {
+    color: var(--soft-blue);
+}
+
+hr {
+    border: 1px solid var(--line);
+    margin: 15px 0;
+}
+
+
+.creation {
+    display: flex;
+    align-items: center;
+}
+
+.creation img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.creation p {
+    margin-left: 15px;
+    font-size: 16px;
+    color: var(--soft-blue);
+}
+
+.creation p span {
+    color: var(--white);
+}
